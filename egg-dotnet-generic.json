@@ -4,7 +4,7 @@
         "version": "PTDL_v2",
         "update_url": null
     },
-    "exported_at": "2024-10-25T15:49:56+02:00",
+    "exported_at": "2024-10-25T16:02:30+02:00",
     "name": ".NET Generic",
     "author": "day@daysling.com",
     "description": "a generic .NET egg\r\n\r\nThis will clone a git repo. it defaults to master if no branch is specified.\r\n\r\nIf you set user_upload then I assume you know what you are doing.",
@@ -13,7 +13,7 @@
         "ghcr.io\/nightsling\/yanks:latest": "ghcr.io\/nightsling\/yanks:latest"
     },
     "file_denylist": [],
-    "startup": "cd \/home\/container; if [[ -d .git ]] && [[ {{AUTO_UPDATE}} == \"1\" ]]; then git pull; fi; \/usr\/bin\/dotnet run --configuration {{B_CONFIG}} --project \/home\/container\/{{PROJECT}};",
+    "startup": "git pull; \/usr\/bin\/dotnet run --configuration \"{{B_CONFIG}}\" --project \"\/home\/container\/{{PROJECT}}\"",
     "config": {
         "files": "{}",
         "startup": "{\r\n    \"done\": \"The software is now online.\"\r\n}",
