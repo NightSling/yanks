@@ -27,7 +27,7 @@ LABEL       author="Sushant Pangeni" maintainer="day@daysling.com"
 LABEL       org.opencontainers.image.source="https://github.com/NightSing/yanks"
 LABEL       org.opencontainers.image.licenses=MIT
 
-RUN         apt install ca-certificates curl git openssl sqlite3 tar tzdata \
+RUN         apt install ca-certificates curl git openssl tar tzdata \
 	&& adduser --disabled-password --home /home/container container
 
 USER        container
